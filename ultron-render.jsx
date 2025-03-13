@@ -44,8 +44,9 @@ class Utlron {
     getFieldsModel(id) {
         return {
             id,
-            data: this.getFile,
+            data: this.getFields(id),
             setData: (data) => {
+                // 监听的时候
                 const d = this.getData(id)
                 if(!d) {
                     return
